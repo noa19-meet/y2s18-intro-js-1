@@ -9,15 +9,36 @@
     <h1>isPalindrome Function</h1>
 
     <script>
-/* Checks if a character is a letter */
+
 function isLetter(char) {
     char = char.toLowerCase();
     return "abcdefghijklmnopqrstuvwxyz".indexOf(char) >= 0;
 }
 
-// Write your isPalindrome function here!
+function isPalindrome(word)
+{
+	var i=0;
+	var reversed = word.split("").reverse().join("");
+	for(i=0;i<word.length;i++)
+	{
+		if(word[i]!=reversed[i])
+		{
+			return false;
+		}
+	}
+	return true;
+}
+var word=prompt("enter a word");
+if (isPalindrome(word))
+{
+	alert("this is a palindrom");
+}else {
+alert("this is not a palindrom");
+}
 
     </script>
+}
+
 </body>
 
 </html>
